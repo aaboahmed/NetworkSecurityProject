@@ -8,7 +8,7 @@ public class Controller {
     public Button decryptButton;
     public Button encryptButton;
     public TextField textField;
-    public Label decryptedLabel;
+    public Label encryptedLabel;
     public ChoiceBox choiceBox;
     public Label headerLabel;
 
@@ -46,7 +46,7 @@ public class Controller {
 
     private void handleRetrieveButton() {
         String algorithmName = choiceBox.getValue().toString();
-        String encryptedMessage = decryptedLabel.getText();
+        String encryptedMessage = encryptedLabel.getText();
         String decryptedMessage;
 
         switch (algorithmName) {
@@ -65,14 +65,14 @@ public class Controller {
 
     private void showEncryptedMessage(String encryptedMessage) {
         headerLabel.setVisible(true);
-        decryptedLabel.setText(encryptedMessage);
+        encryptedLabel.setText(encryptedMessage);
         textField.clear();
     }
 
     private void showDecryptedMessage(String decryptedMessage) {
         headerLabel.setVisible(false);
         textField.setText(decryptedMessage);
-        decryptedLabel.setText("");
+        encryptedLabel.setText("");
     }
 
 }
