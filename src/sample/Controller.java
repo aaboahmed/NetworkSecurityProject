@@ -22,11 +22,11 @@ public class Controller {
 
     @FXML
     private void initialize() {
-        encryptButton.setOnMouseClicked(mouseEvent -> handleHashButton());
-        decryptButton.setOnMouseClicked(mouseEvent -> handleRetrieveButton());
+        encryptButton.setOnMouseClicked(mouseEvent -> handleEncryptButton());
+        decryptButton.setOnMouseClicked(mouseEvent -> handleDecryptedButton());
     }
     
-    private void handleHashButton() {
+    private void handleEncryptButton() {
         String algorithmName = choiceBox.getValue().toString();
         String message = textField.getText();
         String encryptedMessage;
@@ -44,7 +44,7 @@ public class Controller {
         showEncryptedMessage(encryptedMessage);
     }
 
-    private void handleRetrieveButton() {
+    private void handleDecryptedButton() {
         String algorithmName = choiceBox.getValue().toString();
         String encryptedMessage = encryptedLabel.getText();
         String decryptedMessage;

@@ -123,11 +123,8 @@ public class PlayFairCipher extends Cipher {
         } else if (isTheSameColumn(ch1, ch2)) {
             encryptedString = belowCharacter(ch1) + "" + belowCharacter(ch2);
         } else {
-
             encryptedString = getCornerCharacters(ch1, ch2);
-
         }
-
         return encryptedString;
     }
 
