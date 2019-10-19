@@ -55,13 +55,13 @@
       <AnchorPane>
          <children>
 
-            <Label prefHeight="50.0" prefWidth="560.0" text="decrypted text: " textFill="white" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+            <Label fx:id="headerLabel" visible="false" prefHeight="50.0" prefWidth="560.0" text="decrypted text: " textFill="white" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
 
-            <Label fx:id="label" layoutX="184.0" prefHeight="50.0" prefWidth="343.0" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+            <Label fx:id="decryptedLabel" layoutX="184.0" prefHeight="50.0" prefWidth="343.0" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="20.0" />
                </font>

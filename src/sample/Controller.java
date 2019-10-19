@@ -8,8 +8,9 @@ public class Controller {
     public Button decryptButton;
     public Button encryptButton;
     public TextField textField;
-    public Label label;
+    public Label decryptedLabel;
     public ChoiceBox choiceBox;
+    public Label headerLabel;
 
     private  CaesarCipher caesarCipher ;
     private  PlayFairCipher playFairCipher ;
@@ -45,7 +46,7 @@ public class Controller {
 
     private void handleRetrieveButton() {
         String algorithmName = choiceBox.getValue().toString();
-        String encryptedMessage = label.getText();
+        String encryptedMessage = decryptedLabel.getText();
         String decryptedMessage;
 
         switch (algorithmName) {
@@ -62,30 +63,16 @@ public class Controller {
         showDecryptedMessage(decryptedMessage);
     }
 
-
-    private String encryptByPlayFairCipher() {
-        String message = choiceBox.getValue().toString();
-        label.setText(message);
-        textField.clear();
-
-        return "";
-    }
-
-    private String decryptByPlayFairCipher() {
-        String message = label.getText();
-        textField.setText(message);
-        label.setText("");
-        return "";
-    }
-
     private void showEncryptedMessage(String encryptedMessage) {
-        label.setText(encryptedMessage);
+        headerLabel.setVisible(true);
+        decryptedLabel.setText(encryptedMessage);
         textField.clear();
     }
 
     private void showDecryptedMessage(String decryptedMessage) {
+        headerLabel.setVisible(false);
         textField.setText(decryptedMessage);
-        label.setText("");
+        decryptedLabel.setText("");
     }
 
 }
