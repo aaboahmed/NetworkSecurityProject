@@ -3,6 +3,8 @@ package sample;
 //  If both letters are in the same column, take the letter below each one (going back to the top if at the bottom)
 //  If both letters are in the same row, take the letter to the right of each one (going back to the left if at the farthest right)
 //  If neither of the preceding two rules are true, form a rectangle with the two letters and take the letters on the horizontal opposite corner of the rectangle
+//  If the letter is j or signs like (,.?),we don't convert them to any another letter
+//  we don't encrypt number of letters is odd we don't convert last one
 
 import java.util.*;
 
